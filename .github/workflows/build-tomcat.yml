@@ -14,3 +14,15 @@ jobs:
               run: |
                 ls -ltr
                 java -version
+
+            - name: Check out Apache Tomcat
+              uses: actions/checkout@v2
+              with:
+                repository: apache/tomcat
+                ref: master
+                path: ./tomcat
+
+            - name: List project files an dava version
+              run: |
+                ls -ltr
+                java -version
