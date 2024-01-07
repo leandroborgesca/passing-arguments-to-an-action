@@ -1,0 +1,16 @@
+name: Build Tomcat
+
+on: push
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Check out tomcat-users.xml
+              uses: actions/checkout@v2
+
+            - name: List project files an dava version
+              run: |
+                ls -ltr
+                java -version
